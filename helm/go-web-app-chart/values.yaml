@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: syrine13/go-web-app
   pullPolicy: IfNotPresent
-  tag: "16595890081"
+  tag: "16595995623"
 
 ingress:
   enabled: false
