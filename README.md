@@ -1,19 +1,34 @@
-# Go Web Application
+# Go Web App – DevOps Practice Project
 
-This is a simple website written in Golang. It uses the `net/http` package to serve HTTP requests.
+This project was created by Syrine Hammami for **learning and practice purposes**, focusing on building a complete DevOps pipeline around a basic Go web application originally developed by [Abhishek Veeramalla](https://github.com/AbhishekVeeramalla).
 
-## Running the server
+---
 
-To run the server, execute the following command:
+## 🚀 What’s Included
 
-```bash
-go run main.go
-```
+- 🐹 **Go** application
+- 🐳 **Docker** (multi-stage build using distroless base image)
+- ☸️ **Kubernetes** (Deployment, Service, Ingress resources)
+- 📦 **Helm** chart for templating Kubernetes manifests
+- ⚙️ **Terraform** to provision an **EKS cluster** on AWS
+- 🔁 **CI/CD with GitHub Actions**
+  - Build, test, static analysis
+  - Docker image build & push
+  - Helm chart update
+- 🎯 **CD with Argo CD** (automated deployment to cluster)
+- ☁️ **AWS EKS** for hosting the application
 
-The server will start on port 8080. You can access it by navigating to `http://localhost:8080/courses` in your web browser.
+---
 
-## Looks like this
+## 🔧 DevOps Workflow Summary
 
-![Website](static/images/golang-website.png)
+1. **Run & build the Go app locally**
+2. **Containerize** it securely with a minimal Docker image
+3. **Provision an EKS cluster** using Terraform
+4. **Deploy** to a Kubernetes cluster using manifests and Helm
+5. **Automate CI/CD** with GitHub Actions and Argo CD
+6. **Expose the app** through Ingress with hostname-based routing
+7. **Host the app** on AWS using an EKS cluster
 
+---
 
