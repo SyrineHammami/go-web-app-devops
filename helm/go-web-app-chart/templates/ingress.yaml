@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: go-web-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+#the controller reads those rules and configures a load balancer 
+#or proxy (like NGINX) to route traffic accordingly.
+  ingressClassName: nginx
+  rules:
+  - host: "go-web-app.local"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: go-web-app
+            port:
+              number: 80

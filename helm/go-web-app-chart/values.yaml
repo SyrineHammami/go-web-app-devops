@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: syrine13/go-web-app
+  pullPolicy: IfNotPresent
+  tag: "v1"
+
+ingress:
+  enabled: false
+  Classname: ""
+  annotations: {}
+  hosts:
+    - host: "go-web-app.local"
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: go-web-app
+              port:
+                number: 80
